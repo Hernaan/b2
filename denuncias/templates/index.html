@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<br><br>
+<div class="jumbotron text-center">
+  <div class="container">
+    <a href="/" class="lang-logo">
+      <img src="{% static 'lang-logo.png'%}">
+    </a>
+    <h1>Emergencias K68</h1>
+    <p>App para denuncias de incidentes desarrollada para el cuerpo de bomberos voluntarios de Caacupe-K68</p>
+    <a type="button" class="btn btn-lg btn-default" href="http://www.bomberosvoluntarios.org.py/"><span class="glyphicon glyphicon-flash"></span> Quiero saber mas sobre K68</a>
+    <a type="button" class="btn btn-lg btn-primary" href="http://bomberosk68caacupe.blogspot.com/"><span class="glyphicon glyphicon-download"></span> Visita nuestro blog</a>
+  </div>
+</div>
+</div>
+{% endblock %}

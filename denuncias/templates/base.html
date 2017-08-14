@@ -1,0 +1,105 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Emergencias K68</title>
+  <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="Surgeon Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+   SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+  <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    .jumbotron {
+        background: #532f8c;
+        color: white;
+        padding-bottom: 80px
+    }
+    .jumbotron .btn-primary {
+        background: #845ac7;
+        border-color: #845ac7
+    }
+    .jumbotron .btn-primary:hover {
+        background: #7646c1
+    }
+    .jumbotron p {
+        color: #d9ccee;
+        max-width: 75%;
+        margin: 1em auto 2em
+    }
+    .navbar+.jumbotron {
+        margin-top: -20px
+    }
+    .jumbotron .lang-logo {
+        display: block;
+        background: #b01302;
+        border-radius: 50%;
+        overflow: hidden;
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        border: 2px solid white
+    }
+    .jumbotron .lang-logo img {
+        max-width: 100%
+    }
+
+
+  </style>
+  <style>#new_pubs{ color: red; }</style><!-- Estilo de la notifiacion del archivo listar_denuncias.html-->
+</head>
+<body>
+{% block navbar %}
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{% url 'denuncias:pgprincipal' %}"><span class="glyphicon glyphicon-home"></span> Inicio</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#"><span class="glyphicon glyphicon-user"></span> Nosotros</a></li>
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-info-sign"></span> Denuncias<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="{% url 'denuncias:denuncia_crear' %}"> Realizar denuncia</a></li>
+            <li><a href="{% url 'denuncias:listar' %}"> Listar denuncia</a></li>
+          </ul>
+      </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+    <li class="dropdown navbar-righ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-book"></span>Opciones<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="http://bomberosk68caacupe.blogspot.com/"> Blog</a></li>
+            <li><a href="{% url 'denuncias:contacto' %}"> Contacto</a></li>
+            <li><a href="http://www.bomberosvoluntarios.org.py/"> CBVP</a></li>
+            <li><a href="{% url 'logout' %}">Cerrar sesion</a></li>
+          </ul>
+      </li>
+    </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+
+</div><!-- /.container -->
+{% endblock navbar %}
+{% block content %}
+{% endblock %}
+{% block js %}
+<!-- Todo esto esta relacionado con el mapa de google con javascript -->
+      <script src="{% static 'app_map/js/script.js'%}"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHcQT0yBuaLXWdx6Mv_hAroOB0HLmNp5g&callback=init"></script>
+      <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="{% static 'app_map/css/styles.css' %}">
+{% endblock js %}
+
+</body>
+</html>
